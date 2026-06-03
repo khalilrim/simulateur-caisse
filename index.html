@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+
+    Simulateur de Caisse
+
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>
+
+      Simulateur de Caisse
+
+    </h1>
+
+    <p>
+
+      Projet JavaScript natif
+
+    </p>
+
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>
+
+        Ajouter un produit
+
+      </h2>
+
+      <div class="form-group">
+
+        <label>
+
+          Nom produit
+
+        </label>
+
+        <input type="text" id="nom" placeholder="Ex : Nutella">
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+
+          Prix unitaire (FCFA)
+
+        </label>
+
+        <input type="number" id="prix" min="0" placeholder="0">
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+
+          Quantité
+
+        </label>
+
+        <input type="number" id="quantite" min="1" value="1">
+
+      </div>
+
+      <p id="form-error" style="display:none;">
+
+      </p>
+
+      <button class="btn btn-primary" onclick="ajouterProduit()">
+
+        Ajouter au panier
+
+      </button>
+
+    </div>
+
+    <div class="card">
+
+      <h2>
+
+        Panier
+
+      </h2>
+
+      <div id="panier-wrap">
+
+      </div>
+
+      <div class="totaux" id="totaux-wrap" style="display:none;">
+
+        <div class="totaux-row">
+
+          <span>
+
+            Sous-total
+
+          </span>
+
+          <span id="affich-subtotal">
+
+            0 FCFA
+
+          </span>
+
+        </div>
+
+        <div class="totaux-row" id="ligne-remise" style="display:none;">
+
+          <span>
+
+            Remise
+
+            <span id="taux-remise">
+
+            </span>
+
+          </span>
+
+          <span id="affich-remise">
+
+          </span>
+
+        </div>
+
+        <div class="totaux-row">
+
+          <span>
+
+            Total net
+
+          </span>
+
+          <span id="affich-total">
+
+            0 FCFA
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="actions-row" id="actions-wrap" style="display:none;">
+
+        <button class="btn btn-green" onclick="genererTicket()">
+
+          Générer ticket
+
+        </button>
+
+        <button class="btn btn-outline" onclick="viderPanier()">
+
+          Vider panier
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="card" id="ticket-section">
+
+      <h2>
+
+        Ticket de caisse
+
+      </h2>
+
+      <div id="ticket-contenu">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
