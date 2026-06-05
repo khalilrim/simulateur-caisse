@@ -161,9 +161,7 @@ function viderPanier() {
 
     panier = [];
 
-    localStorage.removeItem(
-        "panier"
-    );
+    sauvegarderPanier();
 
     afficherPanier();
 

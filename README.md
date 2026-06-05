@@ -29,4 +29,4 @@ L’utilisateur peut ajouter des produits, calculer automatiquement les montants
 
 ## Lien deploiement GitHub
 
-Lien : 
+Lien : https://khalilrim.github.io/simulateur-caisse/
